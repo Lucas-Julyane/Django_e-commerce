@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <main class="shopping-cart">
+      <section class="cart">
+        <div class="container">
+          <div class="cart-title">
+            <h1>Carrinho</h1>
+          </div>
+          <div class="content-cart">
+            <div class="cart-label">
+              <div class="label-1">
+                <span>Seus itens</span>
+              </div>
+              <div class="label-2">
+                <span>Valor unt.</span>
+              </div>
+              <div class="label-3">
+                <span>Qtd.</span>
+              </div>
+              <div class="label-4">
+                <span>Valor total</span>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <img
+                  src="./src/assets/Harness Pentagrama.jpg"
+                  alt="cart-item"
+                />
+              </div>
+              <p>Harness Pentagrama</p>
+              <span>R$ 125,00</span>
+              <div class="cart-item-actions">
+                <div class="cart-item-actions-qty">
+                  <a href="#"><i class="bx bx-minus"></i></a>
+                  <input class="input form-control" type="text" value="1" />
+                  <a href="#"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+              <div class="cart-item-total">R$ 125,00</div>
+              <div class="cart-item-close">
+                <a href="#">
+                  <i class="bx bx-x"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <img
+                  src="./src/assets/Harness Pentagrama.jpg"
+                  alt="cart-item"
+                />
+              </div>
+              <p>Harness Pentagrama</p>
+              <span>R$ 125,00</span>
+              <div class="cart-item-actions">
+                <div class="cart-item-actions-qty">
+                  <a href="#"><i class="bx bx-minus"></i></a>
+                  <input class="input form-control" type="text" value="1" />
+                  <a href="#"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+              <div class="cart-item-total">R$ 125,00</div>
+              <div class="cart-item-close">
+                <a href="#">
+                  <i class="bx bx-x"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <img
+                  src="./src/assets/Harness Pentagrama.jpg"
+                  alt="cart-item"
+                />
+              </div>
+              <p>Harness Pentagrama</p>
+              <span>R$ 125,00</span>
+              <div class="cart-item-actions">
+                <div class="cart-item-actions-qty">
+                  <a href="#"><i class="bx bx-minus"></i></a>
+                  <input class="input form-control" type="text" value="1" />
+                  <a href="#"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+              <div class="cart-item-total">R$ 125,00</div>
+              <div class="cart-item-close">
+                <a href="#">
+                  <i class="bx bx-x"></i>
+                </a>
+              </div>
+            </div>
+            <div class="btn btn-clear mt-3">
+              <i class="bx bx-trash"></i>Limpar carrinho
+            </div>
+          </div>
+          <div class="cart-actions">
+            <a href="{% url 'checkout_pag' %}" class="btn btn-advance mt-3">
+              <i class="bx bx-chevron-right"></i>Avançar
+            </a>
+            <a href="{% url 'index' %}" class="btn btn-continue mt-3">
+              <i class="bx bx-chevron-left"></i>Continuar comprando
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  {% endblock %}

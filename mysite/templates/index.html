@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+<aside class="sidebar">
+  <div class="options">
+    <h5>Menu</h5>
+    <div class="option">
+      <button type="button" class="collapsible">Categorias</button>
+      <ul class="side-menu">
+        <li class="side-menu_link"><a href="#">Tudo</a></li>
+        <li class="side-menu_link"><a href="#">Destaques</a></li>
+        <li class="side-menu_link"><a href="#">Camisas</a></li>
+        <li class="side-menu_link"><a href="#">Cintos</a></li>
+        <li class="side-menu_link"><a href="#">Chokers</a></li>
+        <li class="side-menu_link"><a href="#">Brincos</a></li>
+        <li class="side-menu_link"><a href="#">Harness</a></li>
+        <li class="side-menu_link"><a href="#">Garter</a></li>
+      </ul>
+    </div>
+    <div class="option">
+      <button type="button" class="collapsible">Ordenar por</button>
+      <ul class="side-menu">
+        <li class="side-menu_link"><a href="#">Categorias</a></li>
+        <li class="side-menu_link"><a href="#">Populares</a></li>
+        <li class="side-menu_link"><a href="#">Menor preço</a></li>
+        <li class="side-menu_link"><a href="#">Maior preço</a></li>
+        <li class="side-menu_link"><a href="#">A-Z</a></li>
+        <li class="side-menu_link"><a href="#">Z-A</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="contacts">
+    <div class="contact">
+      <h5>Contato</h5>
+      <div class="contact-info">
+        <a href="#">
+          <i class="bx bxl-whatsapp"></i>
+          <p>+55 (11) 99999-9999</p>
+        </a>
+        <a href="#">
+          <i class="bx bx-envelope"></i>
+          <p>florihellstore@gmail.com</p>
+        </a>
+      </div>
+    </div>
+    <div class="social-media">
+      <h5>Redes Sociais</h5>
+      <div class="social-media_icons">
+        <a href="#">
+          <i class="bx bxl-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="bx bxl-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="bx bxl-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+
+
+
+
+
+
+
+<main class="main">
+  <section class="products">
+    <div class="container">
+      <div class="products-title">
+        <h1>Todos os produtos</h1>
+      </div>
+      <div class="content-products">
+        <div class="row product-cards">
+
+
+
+
+          {% for produto in produto_all %}
+
+
+          <div class="col-3">
+            <div class="card">
+              <img
+                src="{{produto.foto_produto}}"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body product-item">
+              
+                <h5 class="card-title">{{produto.nome_produto}}</h5>
+                <p class="card-text product-text">
+                  {{ produto.descricao }}
+                </p>
+                <div class="product-price">
+                  <div>
+                    <h3>{{produto.valor}}</h3>
+                  
+                  </div>
+                  <div>
+                    <a href="#" class="btn btn-cart">
+                      <i class="bx bx-plus"></i>
+                      <i class="bx bx-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {% endfor %}
+      </div>
+    </div>
+    </div>
+  </section>
+  </main>
+
+{% endblock %}

@@ -1,0 +1,201 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  padding: 110px 8px 8px 8px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.options h5 {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #818181;
+}
+
+.option {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.option span {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.option .side-menu {
+  margin-top: 2px;
+  margin-bottom: 10px;
+  display: none;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation-name: fadeEffect;
+  animation-name: fadeEffect;
+  animation-duration: 1s;
+}
+
+.option .side-menu .side-menu_link a {
+  font-size: 14px;
+  padding: 6px 8px 6px 25px;
+  text-decoration: none;
+  color: #818181;
+  font-weight: 600;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.option .side-menu .side-menu_link a:hover {
+  color: #520809;
+}
+
+.collapsible {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  background: transparent;
+  color: #520809;
+  border: none;
+  text-align: left;
+  transition: 0.2s ease-out;
+  margin-left: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.collapsible::after {
+  content: url("/src/assets/chevron-right.png");
+  float: left;
+  margin-top: 5px;
+  margin-left: 8px;
+  transition: all 0.2s;
+}
+
+.option .active::after {
+  content: url("/src/assets/chevron-down.png");
+}
+
+.collapsible:focus {
+  outline: none;
+  transition: all 0.2s ease-out;
+}
+
+.contacts {
+  margin-left: 10px;
+}
+
+.sidebar .contact h5 {
+  padding: 20px 0 10px 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #818181;
+}
+
+.contact .contact-info {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.contact .contact-info a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.contact .contact-info a i {
+  font-size: 24px;
+  color: #520809;
+  font-weight: 600;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-info a p {
+  padding-left: 10px;
+  font-size: 11px;
+  color: #1b1b1b;
+  font-weight: 700;
+}
+
+.social-media h5 {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #818181;
+}
+
+.sidebar .social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 0;
+  gap: 10px;
+}
+
+.social-media .social-media_icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 10px;
+}
+
+.social-media .social-media_icons a i {
+  font-size: 24px;
+  text-decoration: none;
+  color: #520809;
+}
+
+/* animation */
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* scroll style */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 0px;
+}

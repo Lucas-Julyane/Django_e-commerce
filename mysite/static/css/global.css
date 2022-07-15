@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: auto;
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span,
+a,
+img,
+blockquote,
+cite,
+table {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-light);
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0px, -5px);
+  }
+  50% {
+    transform: translate(0px, 8px);
+  }
+  100% {
+    transform: translate(0px, -5px);
+  }
+}
+
+/* estilos globais */
+
+:root {
+  /* fonte padrão */
+  --font-family: "Inter", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  #cover {
+    height: 600px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+  border-radius: 0px;
+}
+
+.main {
+  margin-left: 220px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+.footer {
+  width: 100%;
+  padding-top: 24px;
+  position: relative;
+  bottom: 0;
+}
+
+.footer .footer-content {
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 11px 5px rgba(99, 99, 99, 0.1);
+}

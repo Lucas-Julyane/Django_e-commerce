@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'assets/logo.jpg' %}"/>
+    <link
+    href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>FloriHell Store</title>
+</head>
+<body>
+    <header class="navigation">
+        <div class="container-fluid navbar navbar-expand-lg">
+          <div class="p1">
+            <div class="navbar-brand">
+              <a href="{% url 'index' %}">
+                <img src="{% static 'assets/logo.jpg' %}" alt="logo" />
+              </a>
+            </div>
+            <div class="input">
+              <i class="bx bx-search icon"></i>
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="O que você procura?"
+              />
+            </div>
+          </div>
+          <div class="navbar-toolbar">
+            
+
+            {% if user.is_authenticated %}
+            <div class="user-itens">
+              <a href="" class="btn btn-user">
+                {{user.username}}
+              </a>
+            </div>
+
+            <div class="user-itens">
+              <a href="{% url 'logout_' %}" class="btn btn-user">
+                <div class="user-icon">
+                  <i class="bx bx-user"></i>
+                </div>
+                Sair
+              </a>
+            </div>
+            
+            {% else %}
+            
+            <div class="user-itens">
+              <a href="{% url 'signin_pag' %}" class="btn btn-user">
+                <div class="user-icon">
+                  <i class="bx bx-user"></i>
+                </div>
+                Entrar
+              </a>
+            </div>
+            <div class="user-itens">
+              <a href="{% url 'register_pag' %}" class="btn btn-user">
+                <div class="user-icon">
+                  <i class="bx bx-user"></i>
+                </div>
+                Registrar
+              </a>
+            </div>
+
+            {% endif %}
+
+
+
+            
+            <div class="cart">
+              <a href="{% url 'cart_pag' %}">
+                <i class="bx bx-cart"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      {% block left %}
+      
+      {% endblock %}
+      {% block main %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {% endblock %}
+
+      <footer class="fixed-bottom">
+        <div class="footer-content text-right">
+          © 2022 Copyright. <strong>FloriHell Store.</strong> Alguns direitos
+          reservados.
+        </div>
+      </footer>
+      <script type="text/javascript" src="{% static 'js/collapse.js' %}"></script>
+</body>
+</html>

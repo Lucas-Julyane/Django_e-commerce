@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <aside class="sidebar">
+      <div class="options">
+        <h5>Menu</h5>
+        <div class="option">
+          <button type="button" class="collapsible">Categorias</button>
+          <ul class="side-menu">
+            <li class="side-menu_link"><a href="#">Tudo</a></li>
+            <li class="side-menu_link"><a href="#">Destaques</a></li>
+            <li class="side-menu_link"><a href="#">Camisas</a></li>
+            <li class="side-menu_link"><a href="#">Cintos</a></li>
+            <li class="side-menu_link"><a href="#">Chokers</a></li>
+            <li class="side-menu_link"><a href="#">Brincos</a></li>
+            <li class="side-menu_link"><a href="#">Harness</a></li>
+            <li class="side-menu_link"><a href="#">Garter</a></li>
+          </ul>
+        </div>
+        <div class="option">
+          <button type="button" class="collapsible">Ordenar por</button>
+          <ul class="side-menu">
+            <li class="side-menu_link"><a href="#">Categorias</a></li>
+            <li class="side-menu_link"><a href="#">Populares</a></li>
+            <li class="side-menu_link"><a href="#">Menor preço</a></li>
+            <li class="side-menu_link"><a href="#">Maior preço</a></li>
+            <li class="side-menu_link"><a href="#">A-Z</a></li>
+            <li class="side-menu_link"><a href="#">Z-A</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="contact">
+          <h5>Contato</h5>
+          <div class="contact-info">
+            <a href="#">
+              <i class="bx bxl-whatsapp"></i>
+              <p>+55 (11) 99999-9999</p>
+            </a>
+            <a href="#">
+              <i class="bx bx-envelope"></i>
+              <p>florihellstore@gmail.com</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-media">
+          <h5>Redes Sociais</h5>
+          <div class="social-media_icons">
+            <a href="#">
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="order-checkout">
+      <section class="checkout">
+        <div class="container">
+          <div class="cart-title">
+            <h1>Checkout</h1>
+          </div>
+          <div class="content-checkout">
+            <div class="row checkout-space">
+              <div class="checkout-details col-8">
+                <form class="row g-3">
+                  <div class="col-md-6 pt-2">
+                    <label for="" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="" />
+                  </div>
+                  <div class="col-md-6 pt-2">
+                    <label for="" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="" />
+                  </div>
+                  <div class="col-md-6 pt-2">
+                    <label for="" class="form-label">Telefone</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      placeholder="Ex: (XX) 9-9999-9999"
+                    />
+                  </div>
+                  <div class="col-md-6 pt-2">
+                    <label for="" class="form-label">E-mail</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id=""
+                      placeholder="Apartment, studio, or floor"
+                    />
+                  </div>
+                  <div class="col-md-10 pt-2">
+                    <label for="inputCity" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" id="inputCity" />
+                  </div>
+                  <div class="col-md-2 pt-2">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" />
+                  </div>
+                  <div class="col-md-12 pt-2">
+                    <label for="inputCity" class="form-label"
+                      >Observações</label
+                    >
+                    <textarea
+                      type="text"
+                      class="form-control"
+                      id="inputCity"
+                    ></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="checkout-order col-4">
+                <h3>Seu pedido</h3>
+                <div class="checkout-itens">
+                  <div class="checkout-item row">
+                    <div class="checkout-item-img">
+                      <img
+                        src="src/assets/Harness Pentagrama.jpg"
+                        alt="produto"
+                      />
+                    </div>
+                    <div class="checkout-item-info">
+                      <div class="checkout-item-name">
+                        <h4>Harness Pentagrama</h4>
+                        <span>R$ 125,00</span> <span>x1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-info">
+                  <div class="checkout-total">
+                    <span>Subtotal: R$ 125,00</span>
+                  </div>
+                  <div class="checkout-delivery">
+                    <span>Entrega: R$ 20,00</span>
+                  </div>
+                </div>
+                <hr />
+                <h3>Total: R$ 145,00</h3>
+                <div class="checkout-payment">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="payment"
+                      id=""
+                      checked
+                    />
+                    <label class="form-check-label" for="">
+                      Cartão de crédito <i class="bx bx-credit-card-front"></i>
+                    </label>
+                  </div>
+
+                  <form class="row g-3 form-card pt-2">
+                    <div class="col-md-12">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id=""
+                        placeholder="Número do cartão"
+                      />
+                    </div>
+                    <div class="col-md-6 pt-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id=""
+                        placeholder="MM/AA"
+                      />
+                    </div>
+                    <div class="col-md-6 pt-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id=""
+                        placeholder="CVV"
+                      />
+                    </div>
+                  </form>
+                  <div class="form-check pt-3">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name=""
+                      id=""
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Pix <i class="bx bx-qr"></i>
+                    </label>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-place_order">Finalizar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+{% endblock %}

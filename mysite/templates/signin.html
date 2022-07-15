@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <header class="navigation pt-2 pb-2" style="position: relative">
+      <nav class="container-fluid navbar navbar-expand-lg">
+        <a href="{% url 'index' %}" class="btn btn-back">
+          <i class="bx bx-chevron-left"></i>Continuar compando</a
+        >
+      </nav>
+    </header>
+    <main class="form-signin w-100 pb-5">
+      <div class="login-container mt-5">
+        <form action="{% url 'login_' %}" method="post" class="login-form">
+
+          {% csrf_token %}
+          
+          <img class="mb-4" src="/src/assets/logo.jpg" alt="" />
+          <h2 class="h4 mb-3 fw-normal">Login</h2>
+
+          <div class="form-floating">
+            <label for="floatingInput">Email address</label>
+            <input
+            name="email"
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="form-floating pt-3">
+            <label for="floatingPassword">Password</label>
+            <input
+            name="password"
+              type="password"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+          </div>
+
+          <div class="checkbox mt-3 mb-3">
+            <label>
+              <input type="checkbox" value="remember-me" /> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-signin" type="submit">Sign in</button>
+          <span class="pt-3 pb-3" style="font-weight: 500; color: #757575"
+            >ou logar com</span
+          >
+          <div class="social-media_buttons">
+            <button class="d-flex w-100 btn btn-sm" type="submit">
+              <i class="bx bxl-google"></i>
+            </button>
+            <button class="d-flex w-100 btn btn-sm" type="submit">
+              <i class="bx bxl-facebook-circle"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-content text-right">
+        © 2022 Copyright. <strong>FloriHell Store.</strong> Alguns direitos
+        reservados.
+      </div>
+    </footer>
+  </body>
+</html>
